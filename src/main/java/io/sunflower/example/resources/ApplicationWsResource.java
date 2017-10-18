@@ -17,11 +17,11 @@ package io.sunflower.example.resources;
 
 import java.io.IOException;
 
-import io.sunflower.gizmo.Context;
-import io.sunflower.gizmo.Result;
-import io.sunflower.gizmo.websocket.AbstractWebSocketResource;
-import io.sunflower.gizmo.websocket.TextMessage;
-import io.sunflower.gizmo.websocket.WebSocketSession;
+import io.sunflower.ewf.Context;
+import io.sunflower.ewf.Result;
+import io.sunflower.ewf.websocket.AbstractWebSocketResource;
+import io.sunflower.ewf.websocket.TextMessage;
+import io.sunflower.ewf.websocket.WebSocketSession;
 
 /**
  * ApplicationWsResource

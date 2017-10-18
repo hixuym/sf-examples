@@ -14,7 +14,7 @@
   <artifactId>sf-examples</artifactId>
   <version>1.0.1-SNAPSHOT</version>
 
-  <name>Sunflower Examples Project</name>
+  <name>sunflower examples project</name>
 
   <dependencyManagement>
     <dependencies>
@@ -31,17 +31,17 @@
   <dependencies>
     <dependency>
       <groupId>io.sunflower</groupId>
-      <artifactId>sf-gizmo-core</artifactId>
+      <artifactId>sf-ewf-undertow</artifactId>
     </dependency>
 
     <dependency>
       <groupId>io.sunflower</groupId>
-      <artifactId>sf-gizmo-freemarker</artifactId>
+      <artifactId>sf-ewf-freemarker</artifactId>
     </dependency>
 
     <dependency>
       <groupId>io.sunflower</groupId>
-      <artifactId>sf-gizmo-websocket</artifactId>
+      <artifactId>sf-ewf-websocket</artifactId>
     </dependency>
 
     <dependency>

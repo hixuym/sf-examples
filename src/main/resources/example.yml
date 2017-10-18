@@ -4,7 +4,7 @@ defaultName: Stranger
 logging:
   level: INFO
   loggers:
-    "io.sunflower": DEBUG
+    "io.sunflower": INFO
     "io.ebean.SQL": TRACE
     "io.ebean.TXN": TRACE
     "io.ebean.SUM": TRACE
@@ -14,11 +14,16 @@ logging:
     "io.ebean.cache.NATKEY": TRACE
 
 server:
-  type: gizmo
+  type: undertow
 #  applicationContextPath: /app
 #  adminContextPath: /admin
-  applicationSecret: 12345678
-  accessLogFormat: combined
+#  accessLogFormat: combined
+#  minWorkerThreads: 10
+#  maxWorkerThreads: 200
+#  maxIdleTime: 30s
+#  workerQueueSize: 1000
+  properties:
+    ewf.secret: 12345678
 #  applicationConnectors:
 #    - type: https
 #      port: 8443

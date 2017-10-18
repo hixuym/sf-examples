@@ -1,14 +1,17 @@
 package io.sunflower.example.resources;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import io.ebean.EbeanServer;
-import io.sunflower.ebean.Transactional;
+import io.ebean.annotation.Transactional;
+import io.sunflower.ewf.Result;
+import io.sunflower.ewf.Results;
+import io.sunflower.example.core.GreetingService;
 import io.sunflower.example.core.User;
 import io.sunflower.example.core.UserMapper;
-import io.sunflower.gizmo.Result;
-import io.sunflower.gizmo.Results;
 
+@Singleton
 public class ApplicationResource {
 
   @Inject
@@ -19,6 +22,13 @@ public class ApplicationResource {
 
   public Result index() {
     return Results.html();
+  }
+
+  @Inject
+  private GreetingService greetingService;
+
+  public Result hello() {
+    return Results.json().render(greetingService.greeting("michael"));
   }
 
   @io.sunflower.mybatis.Transactional
