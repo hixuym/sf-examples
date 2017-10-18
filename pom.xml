@@ -12,7 +12,6 @@
   </parent>
 
   <artifactId>sf-examples</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
 
   <name>sunflower examples project</name>
 
