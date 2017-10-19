@@ -12,7 +12,7 @@ import io.sunflower.setup.Bootstrap;
 import io.sunflower.setup.Environment;
 
 /**
- * Created by michael on 17/9/2.
+ * @author michael created on 17/9/2
  */
 public class ExampleApplication extends Application<ExampleConfiguration> {
 
