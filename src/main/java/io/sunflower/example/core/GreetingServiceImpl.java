@@ -25,8 +25,8 @@ import javax.inject.Singleton;
 @Singleton
 public class GreetingServiceImpl implements GreetingService {
 
-  @Override
-  public String greeting(String name) {
-    return "Hi, " + name;
-  }
+    @Override
+    public String greeting(String name) {
+        return "Hi, " + name;
+    }
 }

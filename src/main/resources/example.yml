@@ -24,6 +24,7 @@ server:
 #  workerQueueSize: 1000
   properties:
     ewf.secret: 12345678
+    ewf.scanPkgs: io.sunflower.example.controllers
 #  applicationConnectors:
 #    - type: https
 #      port: 8443

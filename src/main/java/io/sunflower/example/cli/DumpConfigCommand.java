@@ -21,20 +21,23 @@ import io.sunflower.example.ExampleConfiguration;
 import io.sunflower.setup.Bootstrap;
 import net.sourceforge.argparse4j.inf.Namespace;
 
+/**
+ * @author michael
+ */
 public class DumpConfigCommand extends ConfiguredCommand<ExampleConfiguration> {
 
-  public DumpConfigCommand() {
-    super("dump", "dump configuration.");
-  }
+    public DumpConfigCommand() {
+        super("dump", "dump configuration.");
+    }
 
-  @Override
-  protected void run(Bootstrap bootstrap, Namespace namespace, ExampleConfiguration configuration)
-      throws Exception {
-    System.out.println("dump..");
-  }
+    @Override
+    protected void run(Bootstrap bootstrap, Namespace namespace, ExampleConfiguration configuration)
+            throws Exception {
+        System.out.println("dump..");
+    }
 
-  @Override
-  public void onError(Cli cli, Namespace namespace, Throwable e) {
-    System.out.println(e.toString());
-  }
+    @Override
+    public void onError(Cli cli, Namespace namespace, Throwable e) {
+        System.out.println(e.toString());
+    }
 }

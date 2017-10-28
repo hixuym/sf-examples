@@ -25,6 +25,11 @@ import com.google.inject.ImplementedBy;
 @ImplementedBy(GreetingServiceImpl.class)
 public interface GreetingService {
 
-  String greeting(String name);
+    /**
+     * say hello to somebody
+     * @param name
+     * @return
+     */
+    String greeting(String name);
 
 }

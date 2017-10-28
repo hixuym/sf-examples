@@ -22,18 +22,18 @@ import org.junit.Test;
 
 public class DumpCommandTests extends BaseCommandTest {
 
-  @Override
-  protected Bootstrap getBootstrap() {
+    @Override
+    protected Bootstrap getBootstrap() {
 
-    Bootstrap<ExampleConfiguration> bootstrap = new Bootstrap<>(new ExampleApplication());
+        Bootstrap<ExampleConfiguration> bootstrap = new Bootstrap<>(new ExampleApplication());
 
-    bootstrap.addCommand(new DumpConfigCommand());
-    return bootstrap;
-  }
+        bootstrap.addCommand(new DumpConfigCommand());
+        return bootstrap;
+    }
 
 
-  @Test
-  public void testDump() throws Exception {
-    cli.run("dump");
-  }
+    @Test
+    public void testDump() throws Exception {
+        cli.run("dump");
+    }
 }

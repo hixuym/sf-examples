@@ -13,32 +13,34 @@
  * limitations under the License.
  */
 
-package io.sunflower.example.resources;
-
-import java.io.IOException;
+package io.sunflower.example.controllers;
 
 import io.sunflower.ewf.Context;
 import io.sunflower.ewf.Result;
+import io.sunflower.ewf.jaxy.Path;
 import io.sunflower.ewf.websocket.AbstractWebSocketResource;
 import io.sunflower.ewf.websocket.TextMessage;
 import io.sunflower.ewf.websocket.WebSocketSession;
 
+import java.io.IOException;
+
 /**
- * ApplicationWsResource
+ * ApplicationWsController
  *
  * @author michael
  * @date 17/10/14 21:08
  */
-public class ApplicationWsResource extends AbstractWebSocketResource {
+public class ApplicationWsController extends AbstractWebSocketResource {
 
-  @Override
-  public Result handshake(Context context) {
-    return super.handshake(context);
-  }
+    @Override
+    @Path("/ws")
+    public Result handshake(Context context) {
+        return super.handshake(context);
+    }
 
-  @Override
-  protected void handleTextMessage(WebSocketSession session, TextMessage message) throws IOException {
-    System.out.println("Received Data:" + message.getPayload());
-    session.sendMessage(new TextMessage(message.getPayload() + " from server!"));
-  }
+    @Override
+    protected void handleTextMessage(WebSocketSession session, TextMessage message) throws IOException {
+        System.out.println("Received Data:" + message.getPayload());
+        session.sendMessage(new TextMessage(message.getPayload() + " from server!"));
+    }
 }

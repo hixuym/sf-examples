@@ -15,19 +15,17 @@
 
 package io.sunflower.example.core;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import io.sunflower.ewf.auth.UsernamePasswordValidator;
 
 /**
+ * SimpleUsernamePasswordValidator
+ *
  * @author michael
+ * created on 17/10/28 16:26
  */
-@Mapper
-public interface UserMapper {
-
-    /**
-     * select user count.
-     * @return
-     */
-    @Select("select count(1) from tb_user")
-    int getUserCount();
+public class SimpleUsernamePasswordValidator implements UsernamePasswordValidator {
+    @Override
+    public boolean validateCredentials(String username, String password) {
+        return true;
+    }
 }
