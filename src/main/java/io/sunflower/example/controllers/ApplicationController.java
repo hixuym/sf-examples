@@ -8,7 +8,6 @@ import io.sunflower.ewf.jaxy.GET;
 import io.sunflower.ewf.jaxy.Path;
 import io.sunflower.example.core.GreetingService;
 import io.sunflower.example.core.User;
-import io.sunflower.example.core.UserMapper;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -23,8 +22,8 @@ public class ApplicationController {
     @Inject
     private EbeanServer ebeanServer;
 
-    @Inject
-    private UserMapper userMapper;
+//    @Inject
+//    private UserMapper userMapper;
 
     @Path("/")
     public Result index() {
@@ -45,12 +44,12 @@ public class ApplicationController {
         return Results.json().render(greetingService.greeting("michael"));
     }
 
-    @io.sunflower.mybatis.Transactional
-    @Path("/user_count")
-    @GET
-    public Result userCount() {
-        return Results.json().render(userMapper.getUserCount());
-    }
+//    @io.sunflower.mybatis.Transactional
+//    @Path("/user_count")
+//    @GET
+//    public Result userCount() {
+//        return Results.json().render(userMapper.getUserCount());
+//    }
 
     @Transactional(rollbackFor = Exception.class)
     @Path("/hello_world.json")

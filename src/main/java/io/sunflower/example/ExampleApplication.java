@@ -11,7 +11,6 @@ import io.sunflower.ewf.internal.template.TemplateEngineFreemarker;
 import io.sunflower.ewf.undertow.EwfBundle;
 import io.sunflower.example.cli.DumpConfigCommand;
 import io.sunflower.example.core.SimpleUsernamePasswordValidator;
-import io.sunflower.mybatis.MybatisBundle;
 import io.sunflower.setup.Bootstrap;
 import io.sunflower.setup.Environment;
 
@@ -41,12 +40,12 @@ public class ExampleApplication extends Application<ExampleConfiguration> {
             }
         });
 
-        bootstrap.addBundle(new MybatisBundle<ExampleConfiguration>() {
-            @Override
-            public PooledDataSourceFactory getDataSourceFactory(ExampleConfiguration configuration) {
-                return configuration.getDataSourceFactory();
-            }
-        });
+//        bootstrap.addBundle(new MybatisBundle<ExampleConfiguration>() {
+//            @Override
+//            public PooledDataSourceFactory getDataSourceFactory(ExampleConfiguration configuration) {
+//                return configuration.getDataSourceFactory();
+//            }
+//        });
 
     }
 

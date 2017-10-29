@@ -18,7 +18,7 @@ package io.sunflower.example.controllers;
 import io.sunflower.ewf.Context;
 import io.sunflower.ewf.Result;
 import io.sunflower.ewf.jaxy.Path;
-import io.sunflower.ewf.websocket.AbstractWebSocketResource;
+import io.sunflower.ewf.websocket.AbstractWebSocketController;
 import io.sunflower.ewf.websocket.TextMessage;
 import io.sunflower.ewf.websocket.WebSocketSession;
 
@@ -30,7 +30,7 @@ import java.io.IOException;
  * @author michael
  * @date 17/10/14 21:08
  */
-public class ApplicationWsController extends AbstractWebSocketResource {
+public class ApplicationWsController extends AbstractWebSocketController {
 
     @Override
     @Path("/ws")

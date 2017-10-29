@@ -15,19 +15,17 @@
 
 package io.sunflower.example.core;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-
 /**
  * @author michael
  */
-@Mapper
+//@Mapper
 public interface UserMapper {
 
     /**
      * select user count.
+     *
      * @return
      */
-    @Select("select count(1) from tb_user")
+//    @Select("select count(1) from tb_user")
     int getUserCount();
 }
